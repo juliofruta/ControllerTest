@@ -11,28 +11,20 @@ import GameplayKit
 import GameController
 
 class GameViewController: UIViewController {
+    
+    var gameScene: GameScene?
 
     private lazy var gameController : GCVirtualController = {
         var config = GameController.GCVirtualController.Configuration.init()
         config.elements = [
             GCInputButtonA,
             GCInputButtonB,
-            GCInputButtonX,
-            GCInputButtonY,
-            GCInputDirectionPad,
             GCInputLeftThumbstick,
-            GCInputRightThumbstick,
-            GCInputLeftShoulder,
-            GCInputRightShoulder,
-            GCInputLeftTrigger
         ]
         let gameController = GameController.GCVirtualController.init(configuration: config)
         gameController.connect { error in
             print(error as Any)
         }
-        
-        
-        
         return gameController
     }()
     
@@ -42,9 +34,10 @@ class GameViewController: UIViewController {
         // Load 'GameScene.sks' as a GKScene. This provides gameplay related content
         // including entities and graphs.
         if let scene = GKScene(fileNamed: "GameScene") {
-            
             // Get the SKScene from the loaded GKScene
             if let sceneNode = scene.rootNode as! GameScene? {
+                
+                gameScene = sceneNode
                 
                 sceneNode.scaleMode = .aspectFill
                 registerGameController(gameController)
@@ -52,9 +45,7 @@ class GameViewController: UIViewController {
                 // Present the scene
                 if let view = self.view as! SKView? {
                     view.presentScene(sceneNode)
-                    
                     view.ignoresSiblingOrder = true
-                    
                     view.showsFPS = true
                     view.showsNodeCount = true
                     view.presentScene(sceneNode)
@@ -80,31 +71,15 @@ class GameViewController: UIViewController {
     }
     
     func registerGameController(_ gameController: GCVirtualController) {
-        let buttonA = gameController.controller?.microGamepad?.buttonA
-        let b = gameController.controller?.microGamepad?.buttonX
-        
-        weak var weakController = self
-        
-        buttonA?.valueChangedHandler = {(_ button: GCControllerButtonInput, _ value: Float, _ pressed: Bool) -> Void in
-            guard let strongController = weakController else {
-                return
-            }
-            strongController.controllerJump(pressed)
-        }
+        let buttonA = gameController.controller?.extendedGamepad?.buttonA
+        let buttonB = gameController.controller?.extendedGamepad?.buttonB
+        let leftThumbstick = gameController.controller?.extendedGamepad?.leftThumbstick
+        let rightThumbstick = gameController.controller?.extendedGamepad?.rightThumbstick
+        buttonA?.valueChangedHandler = gameScene?.buttonA(_:_:_:)
+        buttonB?.valueChangedHandler = gameScene?.buttonA(_:_:_:)
+        leftThumbstick?.valueChangedHandler = gameScene?.thumbStick(_:x:y:)
+        rightThumbstick?.valueChangedHandler = gameScene?.thumbStick(_:x:y:)
+    }
+    
 
-        b?.valueChangedHandler = {(_ button: GCControllerButtonInput, _ value: Float, _ pressed: Bool) -> Void in
-            guard let strongController = weakController else {
-                return
-            }
-            strongController.controllerAttack()
-        }
-    }
-    
-    func controllerAttack() {
-        print("Attack")
-    }
-    
-    func controllerJump(_ pressed: Bool) {
-        print(pressed)
-    }
 }
