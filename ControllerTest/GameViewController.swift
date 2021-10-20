@@ -42,6 +42,8 @@ class GameViewController: UIViewController {
                 sceneNode.scaleMode = .aspectFill
                 registerGameController(gameController)
                 
+                
+                
                 // Present the scene
                 if let view = self.view as! SKView? {
                     view.presentScene(sceneNode)
