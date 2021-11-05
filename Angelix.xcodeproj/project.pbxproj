@@ -38,7 +38,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		4311A3B926FC2A400084F923 /* ControllerTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ControllerTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4311A3B926FC2A400084F923 /* Angelex.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Angelex.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4311A3BC26FC2A400084F923 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4311A3BE26FC2A400084F923 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
 		4311A3C026FC2A400084F923 /* Actions.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Actions.sks; sourceTree = "<group>"; };
@@ -47,9 +47,9 @@
 		4311A3C726FC2A400084F923 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4311A3C926FC2A430084F923 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4311A3CC26FC2A430084F923 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		4311A3D226FC2A440084F923 /* ControllerTestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ControllerTestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4311A3D226FC2A440084F923 /* AngelixTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AngelixTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4311A3D626FC2A440084F923 /* ControllerTestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControllerTestTests.swift; sourceTree = "<group>"; };
-		4311A3DC26FC2A440084F923 /* ControllerTestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ControllerTestUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4311A3DC26FC2A440084F923 /* AngelixUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AngelixUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4311A3E026FC2A440084F923 /* ControllerTestUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControllerTestUITests.swift; sourceTree = "<group>"; };
 		4311A3E226FC2A440084F923 /* ControllerTestUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControllerTestUITestsLaunchTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -92,9 +92,9 @@
 		4311A3BA26FC2A400084F923 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				4311A3B926FC2A400084F923 /* ControllerTest.app */,
-				4311A3D226FC2A440084F923 /* ControllerTestTests.xctest */,
-				4311A3DC26FC2A440084F923 /* ControllerTestUITests.xctest */,
+				4311A3B926FC2A400084F923 /* Angelex.app */,
+				4311A3D226FC2A440084F923 /* AngelixTests.xctest */,
+				4311A3DC26FC2A440084F923 /* AngelixUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -134,9 +134,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		4311A3B826FC2A400084F923 /* ControllerTest */ = {
+		4311A3B826FC2A400084F923 /* Angelix */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 4311A3E626FC2A440084F923 /* Build configuration list for PBXNativeTarget "ControllerTest" */;
+			buildConfigurationList = 4311A3E626FC2A440084F923 /* Build configuration list for PBXNativeTarget "Angelix" */;
 			buildPhases = (
 				4311A3B526FC2A400084F923 /* Sources */,
 				4311A3B626FC2A400084F923 /* Frameworks */,
@@ -146,14 +146,14 @@
 			);
 			dependencies = (
 			);
-			name = ControllerTest;
+			name = Angelix;
 			productName = ControllerTest;
-			productReference = 4311A3B926FC2A400084F923 /* ControllerTest.app */;
+			productReference = 4311A3B926FC2A400084F923 /* Angelex.app */;
 			productType = "com.apple.product-type.application";
 		};
-		4311A3D126FC2A440084F923 /* ControllerTestTests */ = {
+		4311A3D126FC2A440084F923 /* AngelixTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 4311A3E926FC2A440084F923 /* Build configuration list for PBXNativeTarget "ControllerTestTests" */;
+			buildConfigurationList = 4311A3E926FC2A440084F923 /* Build configuration list for PBXNativeTarget "AngelixTests" */;
 			buildPhases = (
 				4311A3CE26FC2A440084F923 /* Sources */,
 				4311A3CF26FC2A440084F923 /* Frameworks */,
@@ -164,14 +164,14 @@
 			dependencies = (
 				4311A3D426FC2A440084F923 /* PBXTargetDependency */,
 			);
-			name = ControllerTestTests;
+			name = AngelixTests;
 			productName = ControllerTestTests;
-			productReference = 4311A3D226FC2A440084F923 /* ControllerTestTests.xctest */;
+			productReference = 4311A3D226FC2A440084F923 /* AngelixTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		4311A3DB26FC2A440084F923 /* ControllerTestUITests */ = {
+		4311A3DB26FC2A440084F923 /* AngelixUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 4311A3EC26FC2A440084F923 /* Build configuration list for PBXNativeTarget "ControllerTestUITests" */;
+			buildConfigurationList = 4311A3EC26FC2A440084F923 /* Build configuration list for PBXNativeTarget "AngelixUITests" */;
 			buildPhases = (
 				4311A3D826FC2A440084F923 /* Sources */,
 				4311A3D926FC2A440084F923 /* Frameworks */,
@@ -182,9 +182,9 @@
 			dependencies = (
 				4311A3DE26FC2A440084F923 /* PBXTargetDependency */,
 			);
-			name = ControllerTestUITests;
+			name = AngelixUITests;
 			productName = ControllerTestUITests;
-			productReference = 4311A3DC26FC2A440084F923 /* ControllerTestUITests.xctest */;
+			productReference = 4311A3DC26FC2A440084F923 /* AngelixUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -210,7 +210,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 4311A3B426FC2A400084F923 /* Build configuration list for PBXProject "ControllerTest" */;
+			buildConfigurationList = 4311A3B426FC2A400084F923 /* Build configuration list for PBXProject "Angelix" */;
 			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -223,9 +223,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				4311A3B826FC2A400084F923 /* ControllerTest */,
-				4311A3D126FC2A440084F923 /* ControllerTestTests */,
-				4311A3DB26FC2A440084F923 /* ControllerTestUITests */,
+				4311A3B826FC2A400084F923 /* Angelix */,
+				4311A3D126FC2A440084F923 /* AngelixTests */,
+				4311A3DB26FC2A440084F923 /* AngelixUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -292,12 +292,12 @@
 /* Begin PBXTargetDependency section */
 		4311A3D426FC2A440084F923 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 4311A3B826FC2A400084F923 /* ControllerTest */;
+			target = 4311A3B826FC2A400084F923 /* Angelix */;
 			targetProxy = 4311A3D326FC2A440084F923 /* PBXContainerItemProxy */;
 		};
 		4311A3DE26FC2A440084F923 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 4311A3B826FC2A400084F923 /* ControllerTest */;
+			target = 4311A3B826FC2A400084F923 /* Angelix */;
 			targetProxy = 4311A3DD26FC2A440084F923 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -458,8 +458,8 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "Julio-Guzman.ControllerTest";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.angelix.app;
+				PRODUCT_NAME = Angelex;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -486,8 +486,8 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "Julio-Guzman.ControllerTest";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.angelix.app;
+				PRODUCT_NAME = Angelex;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -515,7 +515,7 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ControllerTest.app/ControllerTest";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Angelix.app/Angelix";
 			};
 			name = Debug;
 		};
@@ -540,7 +540,7 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ControllerTest.app/ControllerTest";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Angelix.app/Angelix";
 			};
 			name = Release;
 		};
@@ -593,7 +593,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		4311A3B426FC2A400084F923 /* Build configuration list for PBXProject "ControllerTest" */ = {
+		4311A3B426FC2A400084F923 /* Build configuration list for PBXProject "Angelix" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				4311A3E426FC2A440084F923 /* Debug */,
@@ -602,7 +602,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		4311A3E626FC2A440084F923 /* Build configuration list for PBXNativeTarget "ControllerTest" */ = {
+		4311A3E626FC2A440084F923 /* Build configuration list for PBXNativeTarget "Angelix" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				4311A3E726FC2A440084F923 /* Debug */,
@@ -611,7 +611,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		4311A3E926FC2A440084F923 /* Build configuration list for PBXNativeTarget "ControllerTestTests" */ = {
+		4311A3E926FC2A440084F923 /* Build configuration list for PBXNativeTarget "AngelixTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				4311A3EA26FC2A440084F923 /* Debug */,
@@ -620,7 +620,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		4311A3EC26FC2A440084F923 /* Build configuration list for PBXNativeTarget "ControllerTestUITests" */ = {
+		4311A3EC26FC2A440084F923 /* Build configuration list for PBXNativeTarget "AngelixUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				4311A3ED26FC2A440084F923 /* Debug */,
