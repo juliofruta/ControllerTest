@@ -47,12 +47,21 @@ class GameScene: SKScene {
         camera = cameraNode
     }
     
-    var padDirection: CGVector = .zero
-    var playerVelocity: CGVector {
-        return .init(dx: padDirection.dx * 10.0, dy: padDirection.dy * 10.0)
+    var leftPadDelta: CGVector = .zero
+    var rightPadDelta: CGVector = .zero
+    
+    var rightPadDirection: CGVector {
+        let magnitude = sqrt(rightPadDelta.dx * rightPadDelta.dx + rightPadDelta.dy * rightPadDelta.dy )
+        return .init(dx: rightPadDelta.dx / magnitude, dy: rightPadDelta.dy / magnitude)
     }
+    
+    var playerVelocity: CGVector {
+        return .init(dx: leftPadDelta.dx * 10.0, dy: leftPadDelta.dy * 10.0)
+    }
+    
     var bulletVelocity: CGVector {
-        return .init(dx: playerVelocity.dx * 10.0, dy: playerVelocity.dy * 10)
+        let magnitude = 500.0
+        return .init(dx: rightPadDirection.dx * magnitude, dy: rightPadDirection.dy * magnitude)
     }
     
     override func update(_ currentTime: TimeInterval) {
@@ -60,7 +69,7 @@ class GameScene: SKScene {
         self.camera?.run(SKAction.move(by: playerVelocity, duration: 0))
     }
     
-    func buttonA(_ button: GCControllerButtonInput, _ value: Float, _ pressed: Bool) -> Void {
+    private func shoot() {
         let bullet = SKSpriteNode.init(imageNamed: "player")
         self.addChild(bullet)
         bullet.position = player!.position
@@ -69,7 +78,20 @@ class GameScene: SKScene {
         bullet.scale(to: .init(width: 10, height: 10))
     }
     
-    func thumbStick(_ pad: GCControllerDirectionPad, x: Float, y: Float) -> Void {
-        padDirection = CGVector(dx: Double(x), dy: Double(y))
+    func buttonB(_ button: GCControllerButtonInput, _ value: Float, _ pressed: Bool) {
+        shoot()
     }
+    
+    func leftThumbstick(_ pad: GCControllerDirectionPad, x: Float, y: Float) {
+        leftPadDelta = CGVector(dx: Double(x), dy: Double(y))
+    }
+    
+    func rightThumbstick(_ pad: GCControllerDirectionPad, x: Float, y: Float) {
+        rightPadDelta = CGVector(dx: Double(x), dy: Double(y))
+        shoot()
+    }
+    
+    
+    
+    
 }

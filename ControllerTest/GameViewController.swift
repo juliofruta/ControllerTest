@@ -17,9 +17,9 @@ class GameViewController: UIViewController {
     private lazy var gameController : GCVirtualController = {
         var config = GameController.GCVirtualController.Configuration.init()
         config.elements = [
-            GCInputButtonA,
             GCInputButtonB,
             GCInputLeftThumbstick,
+            GCInputRightThumbstick
         ]
         let gameController = GameController.GCVirtualController.init(configuration: config)
         gameController.connect { error in
@@ -73,14 +73,12 @@ class GameViewController: UIViewController {
     }
     
     func registerGameController(_ gameController: GCVirtualController) {
-        let buttonA = gameController.controller?.extendedGamepad?.buttonA
         let buttonB = gameController.controller?.extendedGamepad?.buttonB
         let leftThumbstick = gameController.controller?.extendedGamepad?.leftThumbstick
         let rightThumbstick = gameController.controller?.extendedGamepad?.rightThumbstick
-        buttonA?.valueChangedHandler = gameScene?.buttonA(_:_:_:)
-        buttonB?.valueChangedHandler = gameScene?.buttonA(_:_:_:)
-        leftThumbstick?.valueChangedHandler = gameScene?.thumbStick(_:x:y:)
-        rightThumbstick?.valueChangedHandler = gameScene?.thumbStick(_:x:y:)
+        buttonB?.valueChangedHandler = gameScene?.buttonB(_:_:_:)
+        leftThumbstick?.valueChangedHandler = gameScene?.leftThumbstick(_:x:y:)
+        rightThumbstick?.valueChangedHandler = gameScene?.rightThumbstick(_:x:y:)
     }
     
 
