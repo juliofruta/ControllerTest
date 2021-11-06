@@ -79,6 +79,7 @@ class GameViewController: UIViewController {
         buttonB?.valueChangedHandler = gameScene?.buttonB(_:_:_:)
         leftThumbstick?.valueChangedHandler = gameScene?.leftThumbstick(_:x:y:)
         rightThumbstick?.valueChangedHandler = gameScene?.rightThumbstick(_:x:y:)
+        rightThumbstick?.down.pressedChangedHandler = gameScene?.rightThumbstickPressed(_:_:_:)
     }
     
 

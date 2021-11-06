@@ -76,6 +76,9 @@ class GameScene: SKScene {
         bullet.physicsBody = .init(circleOfRadius: 10)
         bullet.physicsBody?.applyForce(bulletVelocity)
         bullet.scale(to: .init(width: 10, height: 10))
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
+            bullet.removeFromParent()
+        }
     }
     
     func buttonB(_ button: GCControllerButtonInput, _ value: Float, _ pressed: Bool) {
@@ -91,7 +94,7 @@ class GameScene: SKScene {
         shoot()
     }
     
-    
-    
-    
+    func rightThumbstickPressed(_ button: GCControllerButtonInput, _ value: Float, _ pressed: Bool) {
+        shoot()
+    }
 }
